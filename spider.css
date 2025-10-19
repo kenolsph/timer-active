@@ -16,3 +16,14 @@ html,
 				background-repeat: no-repeat;
 				color: #fff;
 			}
+            .vline {
+				position: fixed;
+				top: 0;
+				left: calc(50% + 20px);
+				height: 50vh;
+				width: 1.5px;
+				background-color: #fff;
+				z-index: 10;
+				opacity: 0.75;
+				visibility: hidden;
+			}
