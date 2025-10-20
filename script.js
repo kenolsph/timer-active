@@ -19,3 +19,31 @@ let select = (e) => document.querySelector(e);
 			window.onload = function () {
 				startAnimation();
 			};
+
+            function startAnimation() {
+				setTime(true);
+
+				gsap.to('.cw.t24', 1, {
+					rotation: '-=15',
+					transformOrigin: '50% 50%',
+					ease: 'bounce',
+					onComplete: function () {
+						this.invalidate().delay(1).restart(true);
+					},
+				});
+				gsap.to('.cw.t20', 1, {
+					rotation: '-=18',
+					transformOrigin: '50% 50%',
+					ease: 'bounce',
+					onComplete: function () {
+						this.invalidate().delay(1).restart(true);
+					},
+				});
+                gsap.to('.ccw.t12', 1, {
+					rotation: '+=30',
+					transformOrigin: '50% 50%',
+					ease: 'bounce',
+					onComplete: function () {
+						this.invalidate().delay(1).restart(true);
+					},
+				});
